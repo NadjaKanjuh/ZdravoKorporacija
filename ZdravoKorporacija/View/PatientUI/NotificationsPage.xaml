@@ -1,0 +1,98 @@
+﻿<Page x:Class="ZdravoKorporacija.View.PatientUI.NotificationsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZdravoKorporacija.View.PatientUI"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"  xmlns:viewmodels="clr-namespace:ZdravoKorporacija.View.PatientUI.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:NotificationsPageVM}"
+      mc:Ignorable="d" 
+      d:DesignHeight="768" d:DesignWidth="1024" d:Background="DarkSlateGray"
+      Title="NotificationsPage">
+
+    <Grid Background="#FF242F41">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40"></ColumnDefinition>
+            <ColumnDefinition Width="65"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="65"></ColumnDefinition>
+            <ColumnDefinition Width="40"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Content="   Moja Obavještenja" FontSize="60"  FontWeight="Bold" Grid.Row="1" Grid.Column="3" FontFamily="Cambria Math" Foreground="MediumAquamarine" Grid.ColumnSpan="2" Margin="20,20,50,0"/>
+        <Button Content="Nazad" FontWeight="DemiBold" FontSize="25" Grid.Column="3" Height="60" Width="250" Grid.Row="4" Background="#FF6B7B73"  Command="{Binding BackCommand}" Margin="307,20,40,20">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="14"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <ListView Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" Name="NotificationsListView"  ItemsSource="{Binding Notifications}"  Background="MediumAquamarine"  Height="auto">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderThickness="1" BorderBrush="Black" Margin=" 0 10 0 10">
+                        <Grid Height="100" Width="765">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                <ColumnDefinition Width="240"></ColumnDefinition>
+                                <ColumnDefinition Width ="*"></ColumnDefinition>
+                                <ColumnDefinition Width="50"></ColumnDefinition>
+                                <ColumnDefinition Width="10"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                                <TextBlock Text="ID: " FontSize="14" FontWeight="Bold"></TextBlock>
+                                <TextBlock Text="{Binding Id}" FontSize="14"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                                <TextBlock Text="Naslov: " FontSize="14" FontWeight="Bold"></TextBlock>
+                                <TextBlock Text="{Binding Title}" FontSize="14"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+                                <TextBlock Text="Vrijeme: " FontSize="14" FontWeight="Bold"></TextBlock>
+                                <TextBlock Text="{Binding StartTime}" FontSize="14"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal">
+                                <TextBlock Text="Opis: " FontSize="14" FontWeight="Bold"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal">
+                                <TextBlock Text="{Binding Description}" FontSize="14" ></TextBlock>
+                            </StackPanel>
+                            <Grid Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" VerticalAlignment="Center" Background="Transparent">
+                                <Button  Tag="{Binding Id}"  Margin="5 0 0 0"  Command="{Binding ElementName=NotificationsListView,Path=DataContext.DeleteCommand}"  CommandParameter="{Binding Id}" Background="Transparent" BorderBrush="Transparent">
+                                    <materialDesign:PackIcon Height="30" Width="30" Kind="Remove" Foreground="#FFE95555" ></materialDesign:PackIcon>
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Content="Kreiraj Notifikaciju" FontWeight="DemiBold" FontSize="25" Grid.Column="3" Height="60" Width="250" Grid.Row="4" Background="MediumAquamarine"  Command="{Binding CreateCommand}" Margin="20,20,320,20">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="14"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Obriši sve" FontWeight="DemiBold" Height="40" Width="120" VerticalAlignment="Bottom"  FontSize="25" Grid.Row="1" Background="#FFF64343"  Command="{Binding DeleteAllCommand}" Margin="0,37,567,10" Grid.ColumnSpan="2" Grid.Column="2">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="14"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Page>

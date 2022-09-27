@@ -1,0 +1,130 @@
+[
+  {
+    "Id": 1,
+    "Medication": "Berodual",
+    "Amount": "200mg",
+    "Frequency": 1,
+    "From": "2022-05-13T00:13:00",
+    "To": "2022-05-14T00:13:00"
+  },
+  {
+    "Id": 2,
+    "Medication": "Omeprol",
+    "Amount": "400g",
+    "Frequency": 4,
+    "From": "2022-06-13T00:13:00",
+    "To": "2022-06-14T00:13:00"
+  },
+  {
+    "Id": 3,
+    "Medication": "Paracetamol",
+    "Amount": "12mg",
+    "Frequency": 7,
+    "From": "2022-07-13T00:13:00",
+    "To": "2022-07-14T00:13:00"
+  },
+  {
+    "Id": 4,
+    "Medication": "Paracetamol",
+    "Amount": "200mg",
+    "Frequency": 8,
+    "From": "2022-06-06T00:00:00",
+    "To": "2022-06-09T00:00:00"
+  },
+  {
+    "Id": 5,
+    "Medication": "Aspirin",
+    "Amount": "100mg",
+    "Frequency": 4,
+    "From": "2022-06-06T00:00:00",
+    "To": "2022-06-10T00:00:00"
+  },
+  {
+    "Id": 6,
+    "Medication": "Berodual",
+    "Amount": "200mg",
+    "Frequency": 2,
+    "From": "2022-06-07T00:00:00",
+    "To": "2022-06-09T00:00:00"
+  },
+  {
+    "Id": 7,
+    "Medication": "Berodual",
+    "Amount": "200mg",
+    "Frequency": 8,
+    "From": "2022-06-09T00:00:00",
+    "To": "2022-06-16T00:00:00"
+  },
+  {
+    "Id": 8,
+    "Medication": "Berodual",
+    "Amount": "200mg",
+    "Frequency": 8,
+    "From": "2022-06-08T00:00:00",
+    "To": "2022-06-11T00:00:00"
+  },
+  {
+    "Id": 9,
+    "Medication": "Berodual",
+    "Amount": "200mg",
+    "Frequency": 8,
+    "From": "2022-06-13T00:00:00",
+    "To": "2022-06-17T00:00:00"
+  },
+  {
+    "Id": 10,
+    "Medication": "Aspirin",
+    "Amount": "100mg",
+    "Frequency": 12,
+    "From": "2022-06-13T00:00:00",
+    "To": "2022-06-24T00:00:00"
+  },
+  {
+    "Id": 11,
+    "Medication": "Aspirin",
+    "Amount": "200mg",
+    "Frequency": 8,
+    "From": "2022-06-13T00:00:00",
+    "To": "2022-06-24T00:00:00"
+  },
+  {
+    "Id": 12,
+    "Medication": "Berodual",
+    "Amount": "200mg",
+    "Frequency": 8,
+    "From": "2022-06-14T00:00:00",
+    "To": "2022-06-26T00:00:00"
+  },
+  {
+    "Id": 13,
+    "Medication": "Berodual",
+    "Amount": "200gramakokaina",
+    "Frequency": 5,
+    "From": "2022-06-14T00:00:00",
+    "To": "2022-06-29T00:00:00"
+  },
+  {
+    "Id": 14,
+    "Medication": "Berodual",
+    "Amount": "200kg",
+    "Frequency": 8,
+    "From": "2022-06-18T00:00:00",
+    "To": "2022-06-22T00:00:00"
+  },
+  {
+    "Id": 15,
+    "Medication": "Berodual",
+    "Amount": "200mg",
+    "Frequency": 10,
+    "From": "2022-07-01T00:00:00",
+    "To": "2022-07-27T00:00:00"
+  },
+  {
+    "Id": 16,
+    "Medication": "Berodual",
+    "Amount": "200mg",
+    "Frequency": 120,
+    "From": "2022-06-22T00:00:00",
+    "To": "2022-07-01T00:00:00"
+  }
+]

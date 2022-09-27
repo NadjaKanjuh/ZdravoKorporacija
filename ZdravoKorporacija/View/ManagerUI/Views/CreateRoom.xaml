@@ -1,0 +1,85 @@
+﻿<Page x:Class="ZdravoKorporacija.View.ManagerUI.Views.CreateRoom"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:cmd ="clr-namespace:ZdravoKorporacija.View.ManagerUI.Commands"
+      xmlns:local="clr-namespace:ZdravoKorporacija.View.ManagerUI.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="768" d:DesignWidth="1024"
+      Title="CreateRoom" Background="#fee9e1"  >
+
+    <Grid Margin="20 10" MaxWidth="1024">
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <TextBlock
+             Text="Kreiranje prostorije" 
+             FontSize="30" 
+              Margin="380 5 0 0" TextAlignment="Center" Foreground="Black"></TextBlock>
+
+        </StackPanel>
+
+        <Grid Grid.Row="1" Margin="0 80 0 0 ">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Naziv" Grid.Row="0" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <TextBox Grid.Row="1" 
+                     Margin="0 5 0 0 "
+                     Width="400" 
+                     Height="35"
+                     Text="{Binding Room.Name}" Style="{StaticResource ManagerTextBoxStyle}" x:Name="textBoxName" Background="#fad4c0" VerticalContentAlignment="Center" VerticalAlignment="Stretch" HorizontalAlignment="Center" HorizontalContentAlignment="Center" />
+
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="0 80 0 0 ">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Opis" Grid.Row="0" HorizontalAlignment="Center" FontSize="20" Foreground="black"/>
+            <TextBox Grid.Row="1"
+                     Margin="0 5 0 0 "
+                     Width="400"
+                     Height="35"
+                     Text="{Binding Room.Description}" Style="{StaticResource ManagerTextBoxStyle}" x:Name="textBoxDescription" Background="#fad4c0" VerticalContentAlignment="Center" VerticalAlignment="Stretch" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+        </Grid>
+
+        <Grid Grid.Row="3" Margin="0 80 0 0 ">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Tip" Grid.Row="0" HorizontalAlignment="Center" FontSize="20" Foreground="Black"/>
+            <ComboBox Name="RoomTypeComboBox"  Margin="8,0,8,8" Height="35"
+                             SelectedValuePath="Content" Grid.Row="1" Width="400" Style="{StaticResource ManagerComboBoxStyle}" Background="#fad4c0" >
+                <ComboBoxItem>Prostorija za pregled</ComboBoxItem>
+                <ComboBoxItem>Prostorija za sastanke</ComboBoxItem>
+                <ComboBoxItem>Operacijska sala</ComboBoxItem>
+            </ComboBox>
+        </Grid>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="-60 160 0 0 ">
+            <Button Content="Nazad" Margin="100 0 0 0" Style="{StaticResource ManagerRedButtonStyle}" Command="cmd:RoutedCommand.Back"/>
+            <Button Content="Kreiraj"  Margin="230, 0, 0, 0" Click="Button_Create_Room_Click" Command="{Binding SaveCommand}" Style="{StaticResource ManagerGreenButtonStyle}"/>
+            <Button Content="Pomoć"  Margin="230, 0, 0, 0"  Style="{StaticResource ManagerHelpButton}" Command="cmd:RoutedCommand.Help"/>
+        </StackPanel>
+
+
+    </Grid>
+
+</Page>

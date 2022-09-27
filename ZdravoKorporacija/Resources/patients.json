@@ -1,0 +1,102 @@
+[
+  {
+    "IsGuest": false,
+    "Allergens": [
+      "cetvrti alergen",
+      "peti alergen",
+      "sesti alergen"
+    ],
+    "BloodTypeEnum": 4,
+    "trollCounter": 0,
+    "FirstName": "Ana",
+    "LastName": "Anovic",
+    "Username": "anaa",
+    "Password": "anaanaana",
+    "Jmbg": "1111111111111",
+    "DateOfBirth": "2006-03-28T00:00:00",
+    "Gender": 2,
+    "Email": "cdsa@cdds.coc",
+    "PhoneNumber": "212324423",
+    "Address": "Novosadska 1, Beograd"
+  },
+  {
+    "IsGuest": false,
+    "Allergens": [
+      "prvi alergen",
+      "drugi alergen",
+      "treci alergen"
+    ],
+    "BloodTypeEnum": 2,
+    "trollCounter": 0,
+    "FirstName": "Stefan",
+    "LastName": "Stefanovic",
+    "Username": "stefi",
+    "Password": "stefanoivc",
+    "Jmbg": "1596357841236",
+    "DateOfBirth": "2002-04-12T00:00:00",
+    "Gender": 1,
+    "Email": "stefi@cds.com",
+    "PhoneNumber": "3422",
+    "Address": "Stefana Stefanovica 18, Rijeka"
+  },
+  {
+    "IsGuest": false,
+    "Allergens": [
+      "prvi alergen",
+      "drugi alergen",
+      "treci alergen"
+    ],
+    "BloodTypeEnum": 1,
+    "trollCounter": 0,
+    "FirstName": "Milos",
+    "LastName": "Milosevic",
+    "Username": "mikimilane",
+    "Password": "mackacka",
+    "Jmbg": "7458963215963",
+    "DateOfBirth": "2003-04-16T16:12:17.7395603+02:00",
+    "Gender": 1,
+    "Email": "milos@milos.com",
+    "PhoneNumber": "456789",
+    "Address": "neka adresa 12"
+  },
+  {
+    "IsGuest": false,
+    "Allergens": [
+      "prvi alergen",
+      "drugi alergen",
+      "treci alergen"
+    ],
+    "BloodTypeEnum": 6,
+    "trollCounter": 0,
+    "FirstName": "Lazar",
+    "LastName": "Lazarobi",
+    "Username": "lakil",
+    "Password": "lazarlazar",
+    "Jmbg": "7536984215123",
+    "DateOfBirth": "2002-03-28T00:00:00",
+    "Gender": 1,
+    "Email": "dcas@cds.com",
+    "PhoneNumber": "3421",
+    "Address": "Beogradska 18, Novi Sad"
+  },
+  {
+    "IsGuest": false,
+    "Allergens": [
+      "prvi alergen",
+      "drugi alergen",
+      "treci alergen"
+    ],
+    "BloodTypeEnum": 3,
+    "trollCounter": 0,
+    "FirstName": "Jovan",
+    "LastName": "Konjevic",
+    "Username": "joco",
+    "Password": "jocojoco",
+    "Jmbg": "7778889994445",
+    "DateOfBirth": "2000-08-03T00:00:00",
+    "Gender": 1,
+    "Email": "pero@yahoo.com",
+    "PhoneNumber": "0638162900",
+    "Address": "Pere Jecmenica 45"
+  }
+]

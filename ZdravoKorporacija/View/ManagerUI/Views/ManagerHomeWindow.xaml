@@ -1,0 +1,21 @@
+﻿<Window x:Class="ZdravoKorporacija.View.ManagerUI.Views.ManagerHomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravoKorporacija.View.ManagerUI.Views"
+        xmlns:cmd ="clr-namespace:ZdravoKorporacija.View.ManagerUI.Commands"
+        mc:Ignorable="d"
+        Title="ManagerHomeWindow" Height="768" Width="1024" Background="#fee9e1">
+
+    <Window.CommandBindings>
+        <CommandBinding Command="cmd:RoutedCommand.Logout" CanExecute="Logout_CanExecute" Executed="Logout_Executed"></CommandBinding>
+    </Window.CommandBindings>
+
+    
+
+    <Grid>
+        <Frame x:Name="ManagerMainFrame" Height="768" NavigationUIVisibility="Hidden"></Frame>
+        <Button Content="Odjavi se" Margin="780 0 0 650" Style="{StaticResource ManagerLogOutButtonStyle}" Command="cmd:RoutedCommand.Logout"/>
+    </Grid>
+</Window>
